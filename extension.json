@@ -1,0 +1,34 @@
+{
+	"name": "GoogleSiteLinksSearchBox",
+	"version": "0.1.0",
+	"author": [
+		"Florian Schmidt"
+	],
+	"url": "https://www.droidwiki.de",
+	"descriptionmsg": "googlesitelinkssearchbox-desc",
+	"type": "other",
+	"license-name": "MIT",
+	"MessagesDirs": {
+		"GoogleSiteLinksSearchBox": [
+			"i18n"
+		]
+	},
+	"Hooks": {
+		"BeforePageDisplay": [
+			"GoogleSiteLinksSearchBox\\Hooks::onBeforePageDisplay"
+		],
+		"UnitTestsList": [
+			"GoogleSiteLinksSearchBox\\Hooks::onUnitTestList"
+		]
+	},
+	"config": {
+		"GoogleSiteLinksSearchBoxSearchUrl": false
+	},
+	"AutoloadClasses": {
+		"GoogleSiteLinksSearchBox\\Hooks": "includes/GoogleSiteLinksSearchBox.hooks.php"
+	},
+	"ConfigRegistry": {
+		"googlesitelinkssearchbox": "GlobalVarConfig::newInstance"
+	},
+	"manifest_version": 1
+}
