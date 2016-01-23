@@ -7,6 +7,7 @@ use Skintemplate;
 use SpecialPage;
 use Html;
 use FormatJson;
+use WebRequest;
 
 /**
  * Hook handler class.
@@ -30,7 +31,7 @@ class Hooks {
 				FormatJson::encode( array(
 					'@context' => 'http://schema.org',
 					'@type' => 'WebSite',
-					'url' => $title->getCanonicalURL(),
+					'url' => WebRequest::detectServer(),
 					'potentialAction' => array(
 						'@type' => 'SearchAction',
 						'target' =>
